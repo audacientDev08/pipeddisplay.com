@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Piped Display</title>
+  <meta name="description" content="Privacy policy for the Piped Display Mac and Android apps. No data is collected. No advertising. No third-party trackers." />
+  <link rel="icon" type="image/png" href="pc_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0e27;
+      color: #e6e9f5;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-gradient {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(30, 136, 240, 0.30), transparent 60%),
+        radial-gradient(ellipse 70% 60% at 85% 80%, rgba(123, 214, 49, 0.22), transparent 60%),
+        linear-gradient(135deg, #050818 0%, #0a0e27 50%, #0d1230 100%);
+    }
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(10, 14, 39, 0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #1e88f0 0%, #7bd631 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #0a0e27;
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(30,136,240,0.35);
+    }
+    .nav-back {
+      color: rgba(230,233,245,0.75);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: #fff; }
+
+    header.page-hero {
+      padding: 80px 0 50px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #7bd631;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(36px, 5.5vw, 56px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #c8d4ff 50%, #a0e57f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .updated {
+      font-size: 14px;
+      color: rgba(230,233,245,0.55);
+    }
+    .summary-card {
+      max-width: 700px;
+      margin: 36px auto 0;
+      padding: 22px 26px;
+      background: linear-gradient(135deg, rgba(123,214,49,0.10), rgba(30,136,240,0.08));
+      border: 1px solid rgba(123,214,49,0.25);
+      border-radius: 14px;
+      font-size: 15.5px;
+      color: rgba(230,233,245,0.9);
+      text-align: left;
+      line-height: 1.65;
+    }
+    .summary-card strong { color: #a8e85f; font-weight: 700; }
+
+    main {
+      padding: 30px 0 80px;
+    }
+    section.policy {
+      margin-bottom: 44px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin: 22px 0 8px;
+    }
+    p {
+      color: rgba(230,233,245,0.78);
+      font-size: 15.5px;
+      margin-bottom: 14px;
+    }
+    ul {
+      margin: 10px 0 18px 22px;
+      color: rgba(230,233,245,0.78);
+      font-size: 15.5px;
+    }
+    li { margin-bottom: 8px; }
+    li::marker { color: #7bd631; }
+    a { color: #4ba7ff; text-decoration: none; }
+    a:hover { color: #7bd631; text-decoration: underline; }
+    strong { color: #fff; font-weight: 600; }
+
+    .contact-card {
+      margin-top: 30px;
+      padding: 26px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+    }
+    .contact-card h3 { margin-top: 0; }
+
+    footer {
+      padding: 50px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+    footer .logo { justify-content: center; margin-bottom: 14px; }
+    footer p {
+      color: rgba(230,233,245,0.5);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    footer a { color: rgba(230,233,245,0.7); }
+    footer a:hover { color: #fff; }
+    footer .fine {
+      margin-top: 14px;
+      font-size: 11px;
+      color: rgba(230,233,245,0.4);
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 640px) {
+      header.page-hero { padding: 60px 0 40px; }
+      h2 { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">P</span>
+        <span>Piped Display</span>
+      </a>
+      <a href="index.html" class="nav-back">← Back to home</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: May 14, 2026 · Effective: May 14, 2026</p>
+      <div class="summary-card">
+        <strong>Short version:</strong> Piped Display does not collect, store, transmit, or share any personal data. There are no ads, no analytics, no trackers, and no third-party services. Screen content streamed between your Mac and Android device never leaves your local network, and when our Secured Wi-Fi channel is used, it's end-to-end encrypted.
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="policy">
+        <h2>1. Who we are</h2>
+        <p>
+          Piped Display is developed and operated by <strong>Audacient Technologies LLC</strong> ("we," "us," or "our"). This privacy policy describes how the Piped Display Android app and the Piped Display macOS app (together, the "Apps") handle information.
+        </p>
+        <p>
+          You can reach us at <a href="mailto:support@audacient.com">support@audacient.com</a> with any questions about this policy.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>2. Information we collect</h2>
+        <p>
+          <strong>None.</strong> The Apps do not collect, store, or transmit any personal data to us or to any third party. Specifically:
+        </p>
+        <ul>
+          <li>We do not require an account, sign-up, or login.</li>
+          <li>We do not collect names, email addresses, phone numbers, or any other personally identifiable information.</li>
+          <li>We do not collect device identifiers, advertising IDs, or hardware fingerprints.</li>
+          <li>We do not collect IP addresses, location data, or network identifiers.</li>
+          <li>We do not collect usage data, crash reports, or analytics of any kind.</li>
+          <li>We do not access your contacts, photos, calendar, microphone, or camera.</li>
+          <li>We do not store, copy, or retain any content that passes through the Apps.</li>
+        </ul>
+      </section>
+
+      <section class="policy">
+        <h2>3. How the Apps work</h2>
+        <p>
+          Piped Display is a screen-mirroring utility. The macOS app captures your Mac's display output and streams it to the Android app over one of three local channels:
+        </p>
+        <ul>
+          <li><strong>USB</strong> — A direct wired connection between your Mac and Android device.</li>
+          <li><strong>Wi-Fi</strong> — A peer-to-peer connection over your local Wi-Fi network.</li>
+          <li><strong>Secured Wi-Fi</strong> — The same Wi-Fi channel, additionally protected by end-to-end encryption so that even other devices on the same network cannot intercept the stream.</li>
+        </ul>
+        <p>
+          In all three modes, screen content travels <strong>directly between your two devices</strong>. The stream never passes through our servers — in fact, the Apps do not communicate with any server operated by Audacient Technologies LLC.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>4. Permissions used by the Android app</h2>
+        <p>
+          The Android app requests the following permissions strictly to provide its core functionality. None of these permissions are used to collect or transmit information about you.
+        </p>
+        <h3>Network access (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE)</h3>
+        <p>
+          Used to detect Wi-Fi connectivity and to establish a direct, local network connection with your Mac when you choose the Wi-Fi or Secured Wi-Fi mode. The Android app does not make outbound connections to the public internet during normal operation.
+        </p>
+        <h3>USB host / accessory (USB_PERMISSION)</h3>
+        <p>
+          Used to receive screen data from your Mac when you connect the two devices via USB cable. The Android app only reads incoming display data from the connected Mac; it does not access any other USB device or data.
+        </p>
+        <h3>Foreground service / wake lock</h3>
+        <p>
+          Used to keep the screen-receiving session running and the display awake while you're actively mirroring. These permissions do not access any personal data.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>5. Permissions used by the macOS app</h2>
+        <p>
+          The macOS app requests <strong>Screen Recording</strong> permission. This is required by macOS for any application that captures the display. The permission is used only to read your Mac's screen output for the purpose of streaming it to your paired Android device. The captured frames are sent directly to the Android device and are not written to disk, copied, retained, or transmitted anywhere else.
+        </p>
+        <p>
+          The macOS app may also request access to the local network so it can be discovered by the Android device over Wi-Fi.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>6. Advertising and analytics</h2>
+        <p>
+          The Apps contain <strong>no advertising and no analytics</strong>. We do not integrate Google AdMob, Facebook Audience Network, Firebase Analytics, Google Analytics, Crashlytics, Mixpanel, Amplitude, or any other advertising or analytics SDK. We do not have an advertising ID. We do not profile users.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>7. Third-party services</h2>
+        <p>
+          The Apps do not use any third-party services, APIs, or SDKs that process user data. The only external entities that may have visibility into the existence of the Apps are:
+        </p>
+        <ul>
+          <li><strong>Google Play Store</strong> — when you download the Android app, Google's own policies apply to that transaction. See Google's privacy policy for details.</li>
+          <li><strong>Apple Inc.</strong> — when you download the macOS app (if distributed through the Mac App Store), Apple's privacy policy applies to that transaction.</li>
+        </ul>
+        <p>
+          Neither company receives any information from us beyond standard distribution data, and we do not receive personal information from either platform.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>8. Data security</h2>
+        <p>
+          Because the Apps do not collect or transmit any data to our servers, there is no user data at rest in our infrastructure to be breached. Streaming connections between your two devices remain on your local network.
+        </p>
+        <p>
+          When you use the <strong>Secured Wi-Fi</strong> mode, the screen stream between the Mac and Android device is protected by end-to-end encryption. The encryption keys are generated and exchanged directly between the two paired devices at the start of each session; we do not have access to these keys, and we cannot decrypt your stream.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>9. Children's privacy</h2>
+        <p>
+          The Apps are not directed at children under the age of 13 (or under 16 in the European Economic Area). Because we do not collect any personal information from anyone, we do not knowingly collect information from children. If you believe a child has somehow provided information through the Apps despite our not collecting any, please contact us so we can investigate.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>10. Your rights</h2>
+        <p>
+          Privacy regulations such as the EU General Data Protection Regulation (GDPR), the UK GDPR, and the California Consumer Privacy Act (CCPA) grant you certain rights with respect to your personal data — including rights of access, correction, deletion, and portability.
+        </p>
+        <p>
+          Because we do not collect or store any personal data, we have no records to access, correct, delete, or transfer. You can effectively delete all data associated with the Apps simply by uninstalling them from your device.
+        </p>
+        <p>
+          If you have any questions about your rights, write to us at <a href="mailto:support@audacient.com">support@audacient.com</a>.
+        </p>
+      </section>
+
+      <section class="policy">
+        <h2>11. Changes to this policy</h2>
+        <p>
+          If our data practices ever change — for example, if we add an optional feature that uses a server or collects opt-in diagnostics — we will update this page and revise the "Last updated" date at the top. Material changes will additionally be announced on <a href="https://pipeddisplay.com">pipeddisplay.com</a>.
+        </p>
+        <p>
+          Your continued use of the Apps after a policy update means you accept the revised policy. If you disagree with a change, please uninstall the Apps.
+        </p>
+      </section>
+
+      <section class="policy">
+        <div class="contact-card">
+          <h3>Contact</h3>
+          <p style="margin-bottom: 6px;">
+            Audacient Technologies LLC<br/>
+            Email: <a href="mailto:support@audacient.com">support@audacient.com</a><br/>
+            Website: <a href="https://pipeddisplay.com">pipeddisplay.com</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">P</span>
+        <span>Piped Display</span>
+      </a>
+      <p>&copy; 2026 Piped Display. All rights reserved.</p>
+      <p><a href="mailto:support@audacient.com">support@audacient.com</a> · <a href="privacy.html">Privacy Policy</a></p>
+      <p class="fine">This is an Audacient Technologies LLC initiative.</p>
+    </div>
+  </footer>
+</body>
+</html>
